@@ -1,6 +1,5 @@
 # example-rails
 
-* Live demo: https://flyyer-example-rails.herokuapp.com/
 * Docs and How-to: https://docs.flyyer.io/guides/ruby/rails
 
 For development, run:
