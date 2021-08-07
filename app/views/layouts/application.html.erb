@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%# <title>RailsExample</title> 👈 Remove this line %>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= display_meta_tags %>
+
+    <!-- Minimal css -->
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+  </head>
+
+  <body>
+    <main class="container">
+      <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+      </nav>
+
+      <%= yield %>
+
+      <footer>
+        <hr />
+
+        <p>The resuling meta-tag output for this page is:</p>
+
+        <pre>
+<%= ERB.new(display_meta_tags).result %>
+        </pre>
+      </footer>
+    </main>
+  </body>
+</html>
